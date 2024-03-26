@@ -1,0 +1,32 @@
+.settingsPage{
+    display:flex;
+    justify-content:center;
+    padding-top:50px;
+}
+.settingsPage main{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.settingsPage h1{
+    font-size:40px;
+    font-weight:800;
+    font-family:boldfont;
+}
+
+.settingsPage .fieldinput{
+    max-width:500px;
+    width:100%;
+    margin:10px;
+
+}
+.settingsPage .fieldinput label{
+    width:100%;
+}
+.settingsPage .fieldinput input{
+    height:50px;
+    width:100%;
+    padding:0 20px;
+    outline:2px solid var(--c-4);
+    border-radius:10px;
+}

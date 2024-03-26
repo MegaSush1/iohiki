@@ -1,0 +1,39 @@
+@font-face {
+    font-family: qualy;
+    src: url("fonts/qualy.woff2") format(woff2);
+}
+
+@font-face {
+    font-family: boldfont;
+    src: url("fonts/the_bold_font.woff2") format(woff2);
+}
+
+@font-face {
+    font-family:manrope;
+    src: url("fonts/Manrope-ExtraLight.woff2") format(woff2);
+    font-weight:200;
+}@font-face {
+    font-family:manrope;
+    src: url("fonts/Manrope-Light.woff2") format(woff2);
+    font-weight:300;
+}@font-face {
+    font-family:manrope;
+    src: url("fonts/Manrope-Regular.woff2") format(woff2);
+    font-weight:400;
+}@font-face {
+    font-family:manrope;
+    src: url("fonts/Manrope-Medium.woff2") format(woff2);
+    font-weight:500;
+}@font-face {
+    font-family:manrope;
+    src: url("fonts/Manrope-SemiBold.woff2") format(woff2);
+    font-weight:600;
+}@font-face {
+    font-family:manrope;
+    src: url("fonts/Manrope-Bold.woff2") format(woff2);
+    font-weight:700;
+}@font-face {
+    font-family:manrope;
+    src: url("fonts/Manrope-ExtraBold.woff2") format(woff2);
+    font-weight:800;
+}

@@ -1,0 +1,30 @@
+
+.accountPage header{
+    padding:20px 0 10px 0;
+}
+.accountPage .wrapper{
+    display:flex;
+    max-width:1000px;
+    width:100%;
+    margin:0 auto;
+    padding:40px;
+    align-items:center;
+    background:var(--c-4);
+
+    border-radius:30px;
+}
+.accountPage #pp{
+    height:250px;
+    width:250px;
+}
+.accountPage #pp img{
+    object-fit:cover;
+    height:100%;
+    width:100%;
+    border-radius:50%;
+}
+.accountPage #username{
+    font-family:boldfont;
+    font-size:70px;
+    padding:5px 15px;
+}

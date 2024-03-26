@@ -1,0 +1,27 @@
+#pagecontent{
+    --_back-color:color-mix(in srgb, var(--c-1), hsl(0deg,0%,0%,0.8));
+}
+.indexPage header{
+	padding:20px;
+}
+.indexPage header .hero{
+    display:flex;
+    min-height:200px;
+	height:100%;
+	width:100%;
+	border-radius:30px;
+	padding:20px;
+	align-items:center;
+	background:linear-gradient(hsla(0deg,0%,0%,20%),hsla(0deg,0%,0%,50%)), center / cover no-repeat url(../img/gradient.avif);
+}
+
+.indexPage header .hero > span{
+    font-family:boldfont;
+    color:var(--c-dark-text-live);
+    font-size:50px;
+}
+.indexPage header .hero > span span{
+    font-weight:900;
+    color:var(--c-dark-text-live);
+    text-decoration:underline;
+}

@@ -1,0 +1,9 @@
+
+
+
+
+
+
+
+un user, artiste, chanson, album, podcast, radio poosséde tous un UID unique référencé dans la table UID
+
