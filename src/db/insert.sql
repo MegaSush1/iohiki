@@ -1,2 +1,0 @@
-INSERT INTO user VALUES (NULL,"LIZGIYzbav","Theo","","theo.dehay.student@elmarche.be","mars1234","");
-INSERT INTO user VALUES (NULL,"mDeMJSxkMV","Sabrina","","sabrinaloporte@gmail.com","coffeeSoup","");

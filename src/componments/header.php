@@ -11,11 +11,12 @@
 <head>
     <meta charset="UTF-8"/>
     <title>IOHIKI</title>
-    <link rel="stylesheet" href="src/css/fontconfig.css"/>
+    <link rel="stylesheet" href="src/css/font.css"/>
     <link rel="stylesheet" href="src/css/root.css"/>
     <link rel="stylesheet" href="src/css/index.css"/>
     <link rel="stylesheet" href="src/css/setting.css"/>
     <link rel="stylesheet" href="src/css/account.css"/>
+    <link rel="stylesheet" href="src/css/search.css"/>
 
     <script src="src/script/pageswap.js" defer></script>
     <script src="src/script/generic.js" defer></script>
@@ -39,52 +40,32 @@
                     </a>
                 </div>
 				<div id="mainnav">
-                <nav>
-                    <span class="menulabel">MENU</span>
-                    <ul>
-                        <li><a href="index" rel="page">
-							<div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="m20.0402 6.81994-5.76-4.03c-1.57-1.1-3.98-1.04-5.48997.13l-5.01 3.91c-1 .78-1.79 2.38-1.79 3.63996v6.9c0 2.55 2.07 4.63 4.62 4.63h10.77997c2.55 0 4.62-2.07 4.62-4.62v-6.78c0-1.34996-.87-3.00996-1.97-3.77996z" opacity=".4"/>
-                                <path d="m12 18.75c-.41 0-.75-.34-.75-.75v-3c0-.41.34-.75.75-.75s.75.34.75.75v3c0 .41-.34.75-.75.75z"/>
-                            </svg></div>
-							<span>Home</span>
-						</a></li>
-                        <li><a href="discover" rel="page">
-							<div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path clip-rule="evenodd" d="m14.7898 18.9746c-6.29231 2.5169-9.43848 3.7754-11.23552 2.5542-.42608-.2895-.79357-.657-1.08311-1.0831-1.22116-1.797.03731-4.9432 2.55425-11.23553.53686-1.34215.80528-2.01322 1.26696-2.53969.11764-.13415.24395-.26046.3781-.3781.52647-.46168 1.19754-.7301 2.53969-1.26696 6.29233-2.51694 9.43853-3.77541 11.23553-2.55425.4261.28953.7936.65703 1.0831 1.08311 1.2212 1.79704-.0373 4.94321-2.5542 11.23552-.5369 1.3422-.8053 2.0133-1.267 2.5397-.1176.1342-.2439.2605-.3781.3781-.5264.4617-1.1975.7301-2.5397 1.267z" fill-rule="evenodd" opacity=".4"/>
-                                <path d="m12 8.25c-2.07107 0-3.75 1.67893-3.75 3.75 0 2.0711 1.67893 3.75 3.75 3.75 2.0711 0 3.75-1.6789 3.75-3.75 0-2.07107-1.6789-3.75-3.75-3.75z"/>
-                            </svg></div>
-							<span>Discover</span>
-						</a></li>
-                        <li><a href="search" rel="page">
-							<div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="m11.5 21c5.2467 0 9.5-4.2533 9.5-9.5 0-5.24671-4.2533-9.5-9.5-9.5-5.24671 0-9.5 4.25329-9.5 9.5 0 5.2467 4.25329 9.5 9.5 9.5z" opacity=".4"/>
-                                <path d="m21.3005 22.0001c-.18 0-.36-.07-.49-.2l-1.86-1.86c-.27-.27-.27-.71 0-.99.27-.27.71-.27.99 0l1.86 1.86c.27.27.27.71 0 .99-.14.13-.32.2-.5.2z"/>
-                            </svg></div>
-							<span>Search</span>
-						</a></li>
-                    </ul>
-                </nav>
-                <nav>
-                    <div id="playlistlabel">
-                        <a href="playlist" class="menulabel" rel="page">PLAYLIST</a>
-                        <div id="addPlaylist">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="m18 12.75h-12c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h12c.41 0 .75.34.75.75s-.34.75-.75.75z"/>
-                                <path d="m12 18.75c-.41 0-.75-.34-.75-.75v-12c0-.41.34-.75.75-.75s.75.34.75.75v12c0 .41-.34.75-.75.75z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <ul>
-                        <li data-pID="pHash">
-                            <a href="playlist?uid=1234567890" rel="page">
-                            <div class="pCover"></div>
-                            <div class="pLabel"><span></span></div>
-                            <div class="pDelete"></div>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                    <nav>
+                        <span class="menulabel">MENU</span>
+                        <ul>
+                            <li><a href="index" rel="page">
+                                <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m20.0402 6.81994-5.76-4.03c-1.57-1.1-3.98-1.04-5.48997.13l-5.01 3.91c-1 .78-1.79 2.38-1.79 3.63996v6.9c0 2.55 2.07 4.63 4.62 4.63h10.77997c2.55 0 4.62-2.07 4.62-4.62v-6.78c0-1.34996-.87-3.00996-1.97-3.77996z" opacity=".4"/>
+                                    <path d="m12 18.75c-.41 0-.75-.34-.75-.75v-3c0-.41.34-.75.75-.75s.75.34.75.75v3c0 .41-.34.75-.75.75z"/>
+                                </svg></div>
+                                <span>Home</span>
+                            </a></li>
+                            <li><a href="discover" rel="page">
+                                <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path clip-rule="evenodd" d="m14.7898 18.9746c-6.29231 2.5169-9.43848 3.7754-11.23552 2.5542-.42608-.2895-.79357-.657-1.08311-1.0831-1.22116-1.797.03731-4.9432 2.55425-11.23553.53686-1.34215.80528-2.01322 1.26696-2.53969.11764-.13415.24395-.26046.3781-.3781.52647-.46168 1.19754-.7301 2.53969-1.26696 6.29233-2.51694 9.43853-3.77541 11.23553-2.55425.4261.28953.7936.65703 1.0831 1.08311 1.2212 1.79704-.0373 4.94321-2.5542 11.23552-.5369 1.3422-.8053 2.0133-1.267 2.5397-.1176.1342-.2439.2605-.3781.3781-.5264.4617-1.1975.7301-2.5397 1.267z" fill-rule="evenodd" opacity=".4"/>
+                                    <path d="m12 8.25c-2.07107 0-3.75 1.67893-3.75 3.75 0 2.0711 1.67893 3.75 3.75 3.75 2.0711 0 3.75-1.6789 3.75-3.75 0-2.07107-1.6789-3.75-3.75-3.75z"/>
+                                </svg></div>
+                                <span>Discover</span>
+                            </a></li>
+                            <li><a href="search" rel="page">
+                                <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m11.5 21c5.2467 0 9.5-4.2533 9.5-9.5 0-5.24671-4.2533-9.5-9.5-9.5-5.24671 0-9.5 4.25329-9.5 9.5 0 5.2467 4.25329 9.5 9.5 9.5z" opacity=".4"/>
+                                    <path d="m21.3005 22.0001c-.18 0-.36-.07-.49-.2l-1.86-1.86c-.27-.27-.27-.71 0-.99.27-.27.71-.27.99 0l1.86 1.86c.27.27.27.71 0 .99-.14.13-.32.2-.5.2z"/>
+                                </svg></div>
+                                <span>Search</span>
+                            </a></li>
+                        </ul>
+                    </nav>
 				</div>
             </div>
         </aside>

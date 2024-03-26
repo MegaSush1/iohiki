@@ -106,3 +106,12 @@ class CustomScrollBar extends HTMLElement {
 }
 
 customElements.define("custom-scrollbar", CustomScrollBar);
+
+
+class songPlayer extends HTMLElement {
+
+
+
+}
+
+customElements.define("io-player", songPlayer);
