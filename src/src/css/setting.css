@@ -1,0 +1,38 @@
+main > section{
+    margin:0 auto;
+    max-width:1200px;
+    background:var(--c-back-2);
+    border-radius:40px;
+    padding:20px;
+}
+.hero{
+    position:relative;
+    overflow:hidden;
+    z-index:0;
+}
+.hero .banner{
+    position:absolute;
+    z-index:-1;
+    inset:0px;
+    display:flex;
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    justify-content:center;
+    align-items:center;
+    filter:brightness(.8);
+}
+.hero .profilePicture{
+    display:flex;
+    height:300px;
+    width:300px;
+    object-fit:cover;
+    justify-content:center;
+    align-items:center;
+    border-radius:20px;
+}
+.setting label{
+    display:block;
+    font-weight:700;
+    font-size:20px;
+}

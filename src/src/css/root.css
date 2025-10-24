@@ -1,0 +1,390 @@
+html
+{
+  overflow-x:hidden;
+}
+
+*, *:before, *:after
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-spacing:0;
+	font-size: 13px;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: manrope, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	list-style:none;
+	color:#000;
+	text-decoration:none;
+	outline: none;
+	border:none;
+	background-image:none;
+	background-color:transparent;
+	box-shadow: none;
+    scrollbar-color: var(--c-back-d-2) transparent;
+    scrollbar-width: thin;
+}
+:root
+{
+    --c-back-1:hsl(49,55%,92%);
+    --c-back-1-opa-30:hsla(49,55%,92%,30%);
+    --c-back-1-opa-50:hsla(49,55%,92%,50%);
+    --c-back-1-opa-70:hsla(49,55%,92%,70%);
+
+    --c-back-2:hsl(49,54%,88%);
+    --c-back-2-opa-30:hsla(49,54%,88%,30%);
+    --c-back-2-opa-50:hsla(49,54%,88%,50%);
+    --c-back-2-opa-70:hsla(49,54%,88%,70%);
+
+    --c-back-3:hsl(51,55%,82%);
+    --c-back-3-opa-30:hsla(51,55%,82%,30%);
+    --c-back-3-opa-50:hsla(51,55%,82%,50%);
+    --c-back-3-opa-70:hsla(51,55%,82%,70%);
+
+    --c-back-d-1:hsl(200,100%,8%);
+    --c-back-d-1-opa-30:hsla(200,100%,8%,30%);
+    --c-back-d-1-opa-50:hsla(200,100%,8%,50%);
+    --c-back-d-1-opa-70:hsla(200,100%,8%,70%);
+
+    --c-back-d-2:hsl(201,100%,20%);
+    --c-back-d-2-opa-30:hsla(201,100%,20%,30%);
+    --c-back-d-2-opa-50:hsla(201,100%,20%,50%);
+    --c-back-d-2-opa-70:hsla(201,100%,20%,70%);
+
+    --c-back-d-3:hsl(201,100%,24%);
+    --c-back-d-3-opa-30:hsla(201,100%,24%,30%);
+    --c-back-d-3-opa-50:hsla(201,100%,24%,50%);
+    --c-back-d-3-opa-70:hsla(201,100%,24%,70%);
+
+    --c-accent-d-1:hsl(31,100%,56%);
+    --c-accent-d-2:hsl(31,100%,52%);
+    --c-accent-d-3:hsl(31,100%,48%);
+
+    --c-accent-l-1:hsl(40,99%,72%);
+    --c-accent-l-2:hsl(40,98%,68%);
+    --c-accent-l-3:hsl(40,97%,64%);
+
+    --c-accent-good-1:hsl(154,53%,57%);
+    --c-accent-good-2:hsl(154,53%,64%);
+    --c-accent-good-3:hsl(154,53%,68%);
+
+    --c-accent-bad-1:hsl(0,69%,50%);
+    --c-accent-bad-2:hsl(0,69%,56%);
+    --c-accent-bad-3:hsl(0,69%,60%);
+}
+
+body{
+    background:var(--c-back-1);
+}
+
+
+a{
+    cursor:pointer;
+}
+
+
+
+/* start top bar */
+header{
+    position:fixed;
+    top:0;
+    z-index:990;
+    display:flex;
+    height:150px;
+    width:100%;
+    padding:0 100px;
+    align-items:center;
+    justify-content: space-between;
+    background:var(--c-back-1-opa-50);
+    transition:1s height, 1s background;
+    --_c-text:var(--c-back-d-1);
+}
+
+header > .logo h1{
+    font-family: krinkes, sans-serif;
+    font-size:60px;
+    color:var(--_c-text);
+    transition:1s font-size;
+}
+
+@media screen and (min-width: 900px){
+header.float{
+    height:70px;
+    background:var(--c-back-1);
+    border-bottom:2px solid var(--c-back-d-1);
+}
+header.float > .logo h1{
+    font-size:35px;
+}
+}
+
+header .toggleMenu{
+    position:relative;
+    display:none;
+    height:50px;
+    width:50px;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+header .toggleMenu div{
+    position:absolute;
+    height:10%;
+    width:80%;
+    background:#fff;
+    transition:1s ease;
+}
+header .toggleMenu div:first-child{
+    transform:translateY(-200%);
+}
+header .toggleMenu div:nth-child(3){
+    transform:translateY(200%);
+}
+
+
+.right-header{
+    display:flex;
+    height:100%;
+    width:100%;
+    padding:0 0 0 20px;
+    align-items:center;
+    justify-content: right;
+    gap:20px;
+}
+
+
+
+#searchbar{
+    position:relative;
+    height:50px;
+    max-width:500px;
+    margin:0 auto;
+    flex:1;
+    border-radius:12px;
+}
+#searchbar .i-logo{
+    top:0;
+    position:absolute;
+    z-index:+1;
+    height:50px;
+    width:50px;
+    padding:12px;
+    fill:var(--_c-text);
+    border-radius:12px;
+}
+#searchbar .search-input{
+    position:relative;
+    z-index:+2;
+    height:100%;
+    width: 100%;
+    padding:0 10px 0 50px;
+    color:#ffffff;
+    border-radius:12px;
+    color:var(--_c-text);
+}
+
+#searchbar .search-input::placeholder {
+    opacity: 1;
+}
+#searchbar:has(.search-input:focus){
+    background:#ffffff;
+    outline:2px solid var(--c-back-d-1);
+}
+#searchbar:has(.search-input:focus) .i-logo{
+    fill:var(--c-back-d-1);
+}
+#searchbar:has(.search-input:focus) .search-input{
+    color:var(--c-back-d-1);
+}
+
+#menu{
+    display:flex;
+    gap:10px;
+}
+#menu > div{
+    position:relative;
+    height:50px;
+    width:50px;
+}
+#menu > .connectBtn{
+    width:fit-content;
+}
+
+#menu > .connectBtn .menu_label{
+    display:flex;
+    padding:0px;
+}
+
+#menu > .connectBtn a{
+    display:flex;
+    height:100%;
+    padding:10px;
+    align-items:center;
+}
+#menu .menu_label{
+    display:flex;
+    height:100%;
+    width:100%;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+    font-weight:700;
+    font-size:12px;
+    font-family:varela;
+    border-radius:12px;
+    cursor:pointer;
+    color:var(--_c-text);
+    fill:var(--_c-text);
+}
+#menu > div:is(:hover,:focus-within,:focus,:focus-visible) .menu_label{
+    background:var(--c-back-d-1);
+    color:#ffffff;
+    fill:#ffffff;
+}
+#menu > div:is(:hover,:focus-within,:focus,:focus-visible) .menu_label *{
+    color:#ffffff;
+    fill:#ffffff;
+}
+#menu > div:is(:focus-within,:focus,:focus-visible) .menu_label{
+    border-radius:12px 12px 0 0;
+}
+#menu > div nav{
+    visibility:hidden;
+    position:absolute;
+    top:100%;
+    right:0;
+    width:300px;
+    padding:8px;
+    background:var(--c-back-d-1);
+    outline:#fff solid 2px;
+    outline-offset:-5px;
+    border-radius:12px 0 12px 12px;
+}
+#menu > div:is(:focus-within,:focus,:focus-visible) nav{
+    visibility:visible;
+}
+
+#menu > div nav ul{
+    width:100%;
+}
+#menu > div nav ul li{
+    border-radius:5px;
+}
+#menu > div nav ul li:first-child{
+    border-radius:5px 0 5px 5px;
+}
+#menu > div nav ul li:has(a:is(:hover,:focus-within,:focus,:focus-visible)){
+    background:#fff;
+}
+#menu > div nav ul li a{
+    display:block;
+    padding:10px;
+    font-size:15px;
+    color:#fff;
+}
+#menu > div nav ul li:is(:hover,:focus-within,:focus,:focus-visible) a{
+    color:#000;
+}
+/* start @media top bar*/
+@media screen and (max-width: 900px){
+    header{
+        height:70px;
+        padding:0px 10px;
+        background:var(--c-back-d-1);
+    }
+    header > .logo{
+        background:var(--c-back-d-1);
+    }
+    header > .logo h1{
+        font-size:35px;
+        color:#fff;
+    }
+
+    header .toggleMenu{
+        display:flex;
+        background:var(--c-back-d-1);
+    }
+    header.open .toggleMenu div:first-child{
+        transform:translateY(0%) rotate(405deg);
+    }
+    header.open .toggleMenu div:nth-child(2){
+        transform:translateY(0%) rotate(180deg);
+        width:0%;
+    }
+    header.open .toggleMenu div:nth-child(3){
+        transform:translateY(0%) rotate(495deg);
+    }
+
+    .right-header{
+        position:fixed;
+        height:100%;
+        width:100%;
+        left:-100%;
+        bottom:0;
+        z-index:-1;
+        display:block;
+        padding:70px 10px 0 10px;
+        background:var(--c-back-d-1);
+        overflow-y:auto;
+        visibility:hidden;
+        transition:1s left ease, 0s visibility 1s;
+    }
+    header.open .right-header{
+        visibility:visible;
+        transition:1s left ease,0s visibility 0s;
+        left:0%;
+    }
+
+    #searchbar{
+        max-width:100%;
+    }
+    #searchbar .i-logo{
+        fill:#fff;
+    }
+    #searchbar .search-input{
+        color:#fff;
+    }
+    #searchbar .search-input:focus{
+        color:#000;
+    }
+    #searchbar:has(.search-input:focus) .i-logo{
+        fill:#000;
+    }
+    #menu{
+        display:block;
+    }
+    #menu > .connectBtn{
+        width:100%;
+    }
+    #menu > .connectBtn *{
+        color:#fff;
+        font-size:20px;
+    }
+    #menu > div{
+        position:static;
+        height:fit-content;
+        width:100%;
+
+    }
+    #menu .menu_label{
+        display:none;
+    }
+
+
+    #menu > div nav{
+        visibility:visible;
+        position:unset;
+        width:100%;
+        border-radius:12px;
+    }
+}
+
+/* end @media top bar*/
+/* end top bar */
+
+
+main{
+    padding-top:150px;
+}

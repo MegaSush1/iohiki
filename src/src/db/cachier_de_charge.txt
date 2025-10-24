@@ -1,0 +1,5 @@
+Un artiste peut avoir 0 où plusieurs sons
+Un artiste peut avoir 0 où plusieurs album
+
+Un artiste peut avoir 0 où plusieurs podcast
+Un podcast peut avoir 1 où plusieurs épisode

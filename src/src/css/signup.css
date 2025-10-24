@@ -1,0 +1,113 @@
+main{
+    padding:150px 0 0 0;
+}
+@media screen and (max-width: 900px){
+main{
+   padding:80px 0 0 0;
+}
+}
+main form{
+    width:100%;
+    max-width:500px;
+    margin:0 auto;
+    padding:25px;
+    border-radius:15px;
+    background:var(--c-back-2);
+}
+main form h1{
+    margin:10px 0 40px 0;
+    font-size:30px;
+}
+
+main form > div{
+    width:100%;
+}
+
+
+form > div{
+    position:relative;
+    width:100%;
+    max-width:500px;
+    outline:2px solid #000;
+    outline-offset:-3px;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+form > div label{
+    position:absolute;
+    top:50%;
+    left:12px;
+    padding:0 5px;
+    transform:translate(0,-50%);
+    transition:.2s;
+    background:var(--c-back-2);
+}
+form > div:has(input:focus) label{
+    top:0;
+}
+form > div:has( input:not(:placeholder-shown) ) label{
+    top:0;
+    cursor:pointer;
+}
+
+form div input{
+    width:100%;
+    padding:12px;
+    cursor:pointer;
+}
+
+form > div:has( input:required:valid ) {
+    outline:2px solid var(--c-accent-good-1);
+}
+
+form > div:has( input:required:invalid:not(:placeholder-shown) ) {
+    outline:2px solid var(--c-accent-bad-1);
+}
+
+form input[type="submit"]{
+    border:3px solid var(--c-accent-d-3);
+    width:100%;
+    max-width:500px;
+    padding:5px 15px;
+    border-radius:10px;
+    color:#fff;
+    background:var(--c-accent-d-1);
+}
+form input[type="submit"]:hover{
+    background:var(--c-accent-d-1);
+}
+form input[type="submit"]:focus{
+    background:var(--c-accent-l-1);
+}
+
+.formFooter a{
+    text-decoration:underline;
+}
+.formFooter a:is(:focus,:hover){
+    text-decoration:underline var(--c-accent-d-1);
+    color:var(--c-accent-d-1);
+}
+
+.errorBlock{
+    display:block;
+    padding:10px;
+    margin-bottom:20px;
+    border:2px solid var(--c-accent-bad-1);
+    color:var(--c-accent-bad-1);
+    font-weight:600;
+    border-radius:10px;
+}
+
+.switchButton{
+    display:block;
+    border:3px solid var(--c-accent-d-3);
+    width:100%;
+    max-width:500px;
+    padding:5px 15px;
+    margin-top:50px;
+    border-radius:10px;
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    background:var(--c-accent-d-1);
+}
