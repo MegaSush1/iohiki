@@ -1,4 +1,5 @@
-#projet IOHIKI
+# Projet IOHIKI
+
 Iohiki est un projet final de 6ème secondaire pour mon cours de web.
 J'en suis particulièrement fier parce que ça a été la première ( et sûrement pas la dernière) fois que je touchais au PHP.
 
